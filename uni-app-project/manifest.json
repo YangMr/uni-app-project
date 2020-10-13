@@ -47,5 +47,20 @@
             "urlCheck" : true,
             "postcss" : true
         }
-    }
+    },
+	/* h5特有相关 */
+	"h5" : {
+	    "devServer" : {
+	          "disableHostCheck" : true,
+	          "proxy" : {
+	              "/dev" : {
+					   "target" : "http://ceshi2.dishait.cn", //目标接口域名
+	                   "changeOrigin" : true,  //是否跨域
+					   "pathRewrite": {
+					        "^/dev": ""
+					}
+	             }
+	        }
+	    }
+	}
 }
